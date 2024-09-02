@@ -1,0 +1,13 @@
+# About open-with
+This is a small utility library to open a thing (usually a file or URL) in an appropriate handler (usually an external file manager or browser).
+
+# How To
+Simply invoke ``open`` on the thing you want to present to the user.
+
+::
+(org.shirakumo.open-with:open "https://shirakumo.org")
+::
+
+This should open our website in the user's browser, for instance.
+
+The library will do a best effort to open whatever you give it in the default program that the user has configured for it on their system. If this is not good enough for your specific purpose, you can customise the behaviour through ``*file-type-associations*`` and ``*url-schema-associations*``.

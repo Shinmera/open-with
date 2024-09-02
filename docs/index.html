@@ -1,0 +1,141 @@
+<!DOCTYPE html> <html lang="EN"> <head> <meta charset="utf-8"> <title>Open With</title> <style>html body{margin:0 auto 0 auto;padding:20px;max-width:1024px;font-family:sans-serif;font-size:14pt;overflow-y:scroll;}html body a{text-decoration:none;}html body a[href]{color:#0055AA;}html body a[href]:hover{color:#0088EE;}html body pre{background:#FAFAFA;border:1px solid #DDDDDD;padding:0.75em;overflow-x:auto;}html body pre >code a[href]{color:#223388;}article.project h1{font-size:1.7em;}article.project h1,article.project h2,article.project h3,article.project h4,article.project h5,article.project h6{margin:0.2em 0 0.1em 0;text-indent:1em;}article.project >header{text-align:center;}article.project >header img.logo{display:block;margin:auto;max-height:170px;}article.project >header h1{display:inline-block;text-indent:0;font-size:2.5em;}article.project >header .version{vertical-align:bottom;}article.project >header .languages{margin-top:-0.5em;text-transform:capitalize;}article.project >header .description{margin:0;}article.project >header .pages{margin-top:0.5em;font-size:1.2em;text-transform:capitalize;}article.project >header .pages a{display:inline-block;padding:0 0.2em;}article.project >section{margin:1em 0 1em 0;}article.project >section img{max-width:100%;}article.project #index >ul{list-style:none;margin:0;padding:0;}article.project .row label{display:inline-block;min-width:8em;}article.project #system .row{display:flex;}article.project #system #dependencies{display:inline;margin:0;padding:0;}article.project #system #dependencies li{display:inline;padding:0 0.2em;}article.project #system #author label{vertical-align:top;}article.project #system #author ul{display:inline-block;margin:0;padding:0;list-style:none;}article.definition{margin:1em 0 0 0;}article.definition >header h1,article.definition >header h2,article.definition >header h3,article.definition >header h4,article.definition >header h5,article.definition >header h6{text-indent:0;display:inline-block;}article.definition >header ul{display:inline-block;list-style:none;margin:0;padding:0;}article.definition >header ul li{display:inline-block;padding:0 0.2em 0 0;}article.definition >header .visibility{display:none;}article.definition >header .visibility,article.definition >header .type{text-transform:lowercase;}article.definition >header .source-link{visibility:hidden;float:right;}article.definition >header .source-link:after{visibility:visible;content:"[SRC]";}article.definition .docstring{margin:0 0 0 1em;}article.definition .docstring pre{font-size:0.8em;white-space:pre-wrap;}.definition.package >header ul.nicknames{display:inline-block;list-style:none;margin:0;padding:0 0 0 1em;}.definition.package >header ul.nicknames li{display:inline;}.definition.package >header ul.nicknames:before{content:"(";}.definition.package >header ul.nicknames:after{content:")";}.definition.package ul.definitions{margin:0;list-style:none;padding:0 0 0 0.5em;}.definition.callable >header .name:before,.definition.type >header .name:before{content:"(";font-weight:normal;}.definition.callable >header .arguments:after,.definition.type >header .arguments:after{content:")";}.definition.callable >header .arguments .arguments:before,.definition.type >header .arguments .arguments:before{content:"(";}.definition.callable >header .arguments .argument,.definition.type >header .arguments .argument{padding:0;}.definition.callable >header .arguments .argument.lambda-list-keyword,.definition.type >header .arguments .argument.lambda-list-keyword{color:#991155;}.definition li>mark{background:none;border-left:0.3em solid #0088EE;padding-left:0.3em;display:block;}</style> </head> <body> <article class="project"> <header>   <h1>open with</h1>   <span class="version">1.0.0</span>    <p class="description">Open a file in a suitable external program</p>   </header> <section id="documentation"><article><h1 id="about open-with">About open-with</h1><p>This is a small utility library to open a thing (usually a file or URL) in an appropriate handler (usually an external file manager or browser).</p><h1 id="how to">How To</h1><p>Simply invoke <code><a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN" class="xref">open</a></code> on the thing you want to present to the user.</p><code style="display:block" class="code-block"><pre>(<a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN" class="xref">org.shirakumo.open-with:open</a> &quot;https://shirakumo.org&quot;)</pre></code><p>This should open our website in the user's browser, for instance.</p><p>The library will do a best effort to open whatever you give it in the default program that the user has configured for it on their system. If this is not good enough for your specific purpose, you can customise the behaviour through <code><a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AFILE-TYPE-ASSOCIATIONS%2A" class="xref">*file-type-associations*</a></code> and <code><a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AURL-SCHEMA-ASSOCIATIONS%2A" class="xref">*url-schema-associations*</a></code>.</p></article></section>   <section id="system"> <h2>System Information</h2>  <div class="row"> <label for="version">Version:</label> <a id="version">1.0.0</a> </div>   <div class="row"> <label for="dependencies">Dependencies:</label> <ul id="dependencies"><li><a class="external" href="https://Shinmera.github.io/documentation-utils/">documentation-utils</a></li><li><a class="external">trivial-features</a></li><li><a class="external">uiop</a></li></ul> </div>   <div class="row" id="author"> <label for="author">Author:</label> <a href="mailto:shinmera@tymoon.eu">Yukari Hafner</a> </div>   <div class="row"> <label for="license">License:</label> <a id="license" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/LICENSE">zlib</a> </div>   <div class="row"> <label for="homepage">Homepage:</label> <a id="homepage" href="https://shinmera.github.io/open-with">https://shinmera.github.io/open-with</a> </div>   <div class="row"> <label for="bug-tracker">Bug Tracker:</label> <a id="bug-tracker" href="https://github.com/Shinmera/open-with/issues">https://github.com/Shinmera/open-with/issues</a> </div>   <div class="row"> <label for="sources">Sources:</label> <a id="sources" href="https://github.com/Shinmera/open-with.git">https://github.com/Shinmera/open-with.git</a> </div>  </section>    <section id="index"> <h2>Definition Index</h2> <ul> <li> <article class="definition package" id="PACKAGE ORG.SHIRAKUMO.OPEN-WITH"> <header> <h3> <a href="#PACKAGE%20ORG.SHIRAKUMO.OPEN-WITH">ORG.SHIRAKUMO.OPEN-WITH</a> </h3> <ul class="nicknames"></ul>  </header> <div class="docstring"><i>No documentation provided.</i></div> <ul class="definitions"> <li> <article class="definition special-variable" id="VARIABLE ORG.SHIRAKUMO.OPEN-WITH:*DEFAULT-FILE-HANDLER*"> <header> <span class="visibility">EXTERNAL</span> <span class="type">SPECIAL-VARIABLE</span> <h4 class="name"> <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2ADEFAULT-FILE-HANDLER%2A">*DEFAULT-FILE-HANDLER*</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments"></ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L5">Source</a>  </header> <div class="docstring"><pre>The default handler for files when no specific one is set.
+
+You may set this to any handler as specified by RUN-HANDLER.
+
+See <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AFILE-TYPE-ASSOCIATIONS%2A" class="xref">*FILE-TYPE-ASSOCIATIONS*</a>
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER" class="xref">RUN-HANDLER</a>
+See <a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN" class="xref">OPEN</a></pre></div> </article> </li>  <li> <article class="definition special-variable" id="VARIABLE ORG.SHIRAKUMO.OPEN-WITH:*DEFAULT-URL-HANDLER*"> <header> <span class="visibility">EXTERNAL</span> <span class="type">SPECIAL-VARIABLE</span> <h4 class="name"> <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2ADEFAULT-URL-HANDLER%2A">*DEFAULT-URL-HANDLER*</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments"></ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L12">Source</a>  </header> <div class="docstring"><pre>The default handler for URLs when no specific one is set.
+
+You may set this to any handler as specified by RUN-HANDLER.
+
+See <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AURL-SCHEMA-ASSOCIATIONS%2A" class="xref">*URL-SCHEMA-ASSOCIATIONS*</a>
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER" class="xref">RUN-HANDLER</a>
+See <a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN" class="xref">OPEN</a></pre></div> </article> </li>  <li> <article class="definition special-variable" id="VARIABLE ORG.SHIRAKUMO.OPEN-WITH:*FILE-TYPE-ASSOCIATIONS*"> <header> <span class="visibility">EXTERNAL</span> <span class="type">SPECIAL-VARIABLE</span> <h4 class="name"> <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AFILE-TYPE-ASSOCIATIONS%2A">*FILE-TYPE-ASSOCIATIONS*</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments"></ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L3">Source</a>  </header> <div class="docstring"><pre>A hash table associating file extension types to handlers.
+
+You may set entries in this table with keys being PATHNAME-TYPEs and
+values being handlers as specified by RUN-HANDLER.
+
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER" class="xref">RUN-HANDLER</a>
+See <a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN" class="xref">OPEN</a></pre></div> </article> </li>  <li> <article class="definition special-variable" id="VARIABLE ORG.SHIRAKUMO.OPEN-WITH:*URL-SCHEMA-ASSOCIATIONS*"> <header> <span class="visibility">EXTERNAL</span> <span class="type">SPECIAL-VARIABLE</span> <h4 class="name"> <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AURL-SCHEMA-ASSOCIATIONS%2A">*URL-SCHEMA-ASSOCIATIONS*</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments"></ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L4">Source</a>  </header> <div class="docstring"><pre>A hash table associating url schemas to handlers.
+
+You may set entries in this table with keys being URL schemas and
+values being handlers as specified by RUN-HANDLER.
+
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER" class="xref">RUN-HANDLER</a>
+See <a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN" class="xref">OPEN</a></pre></div> </article> </li>  <li> <article class="definition function callable" id="FUNCTION ORG.SHIRAKUMO.OPEN-WITH:EXTERNAL-OPEN-WITH-FUN"> <header> <span class="visibility">EXTERNAL</span> <span class="type">FUNCTION</span> <h4 class="name"> <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AEXTERNAL-OPEN-WITH-FUN">EXTERNAL-OPEN-WITH-FUN</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments">  <li class="argument">PROGRAM</li>    <li class="argument lambda-list-keyword">&amp;REST</li>    <li class="argument">ARGS</li>  </ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L31">Source</a>  </header> <div class="docstring"><pre>Create a handler for an external program.
+
+An external program with the given name is searched for in directories
+listed in the PATH environment variable (on Windows with the .exe
+suffix). If none can be found, an error is signalled. If one can be
+found, a function suitable for RUN-HANDLER is returned that will
+create a process for the program to open the THING with. When starting
+the program, ARGS are provided as command-line arguments to the
+program, with the THING to open as the last argument appended on.
+
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER" class="xref">RUN-HANDLER</a></pre></div> </article> </li>  <li> <article class="definition function callable" id="FUNCTION ORG.SHIRAKUMO.OPEN-WITH:RUN-HANDLER"> <header> <span class="visibility">EXTERNAL</span> <span class="type">FUNCTION</span> <h4 class="name"> <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER">RUN-HANDLER</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments">  <li class="argument">HANDLER</li>    <li class="argument">THING</li>    <li class="argument lambda-list-keyword">&amp;REST</li>    <li class="argument">ARGS</li>    <li class="argument lambda-list-keyword">&amp;KEY</li>    <li class="argument lambda-list-keyword">&amp;ALLOW-OTHER-KEYS</li>  </ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L39">Source</a>  </header> <div class="docstring"><pre>Run a handler for the THING with the given arguments.
+
+HANDLER can be one of the following:
+
+  HANDLER ::= symbol
+            | function
+            | program
+            | (option+)
+  program ::= string
+  option  ::= symbol
+            | function
+            | program
+            | (program string*)
+
+Where OPTIONs are potential handlers that are tried in sequence until
+one that does not error appears. If none of the options run without
+error, an error is signalled at the end.
+
+In the case of SYMBOLs and FUNCTIONs, the designated lisp function is
+simply invoked with THING and ARGS. In the case of PROGRAMs, a handler
+function is constructed via EXTERNAL-OPEN-WITH-FUN
+
+In all cases ARGS should be a keyword argument list, and whatever
+handler must accept any keyword argument, though may ignore all of
+them. The only specified keyword argument is BACKGROUND which, if
+true, specifies that the handler should be run in the background and
+the function should return immediately.
+
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AEXTERNAL-OPEN-WITH-FUN" class="xref">EXTERNAL-OPEN-WITH-FUN</a></pre></div> </article> </li>  <li> <article class="definition generic-function callable" id="GENERIC-FUNCTION ORG.SHIRAKUMO.OPEN-WITH:OPEN"> <header> <span class="visibility">EXTERNAL</span> <span class="type">GENERIC-FUNCTION</span> <h4 class="name"> <a href="#GENERIC-FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3AOPEN">OPEN</a> </h4> <ul class="qualifiers"></ul> <ul class="arguments">  <li class="argument">THING</li>    <li class="argument lambda-list-keyword">&amp;REST</li>    <li class="argument">ARGS</li>  </ul>  <a class="source-link" href="https://github.com/shinmera/open-with/blob/777d8fc191accee70f9f4db6f9f2cf3aab6b0650/toolkit.lisp#L53">Source</a>  </header> <div class="docstring"><pre>Attempts to open THING for viewing or editing.
+
+Users may add methods to this function to customise the behhaviour for
+other types. A default implementation for PATHNAMEs and STRINGs is
+provided, which invokes a file handler for pathnames and strings
+unless the string starts with an URL schema, in which case a url
+handler is invoked instead.
+
+For files, if the pathname has a type, a corresponding handler is
+looked up in the *FILE-TYPE-ASSOCIATIONS* table. If it is a directory,
+the handler is looked up by the :DIRECTORY key. Otherwise it is looked
+up by the :FILE key. If no custom handler is set, the
+*DEFAULT-FILE-HANDLER* is used.
+
+For URLs, a corresponding handler is looked up in the
+*URL-SCHEMA-ASSOCIATIONS* table. If no custom handler is set, the
+*DEFAULT-URL-HANDLER* is used.
+
+Whatever the case, the chosen handler is then invoked on THING and
+ARGS via the RUN-HANDLER function.
+
+See <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AFILE-TYPE-ASSOCIATIONS%2A" class="xref">*FILE-TYPE-ASSOCIATIONS*</a>
+See <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2AURL-SCHEMA-ASSOCIATIONS%2A" class="xref">*URL-SCHEMA-ASSOCIATIONS*</a>
+See <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2ADEFAULT-FILE-HANDLER%2A" class="xref">*DEFAULT-FILE-HANDLER*</a>
+See <a href="#VARIABLE%20ORG.SHIRAKUMO.OPEN-WITH%3A%2ADEFAULT-URL-HANDLER%2A" class="xref">*DEFAULT-URL-HANDLER*</a>
+See <a href="#FUNCTION%20ORG.SHIRAKUMO.OPEN-WITH%3ARUN-HANDLER" class="xref">RUN-HANDLER</a></pre></div> </article> </li> </ul> </article> </li> </ul> </section>  </article> <script>window.addEventListener("DOMContentLoaded", function(){
+    var unmarkElement = function(el){
+        if(el.tagName === "mark" || el.tagName === "MARK"){
+            [].forEach.call(el.childNodes, function(child){
+                el.parentNode.insertBefore(child, el);
+            });
+            el.parentNode.removeChild(el);
+        }else if(el.parentNode.tagName === "mark"){
+            return unmarkElement(el.parentNode);
+        }
+        return null;
+    }
+
+    var unmarkAll = function(root){
+        root = root || document;
+        [].forEach.call(root.querySelectorAll("mark"), unmarkElement);
+    }
+    
+    var markElement = function(el){
+        if(el.parentNode.tagName === "mark" || el.parentNode.tagName === "MARK"){
+            return el.parentNode;
+        } else {
+            unmarkAll();
+            var marked = document.createElement("mark");
+            el.parentNode.insertBefore(marked, el);
+            marked.appendChild(el);
+            return marked;
+        }
+    }
+
+    var markFragmented = function(){
+        if(window.location.hash){
+            var el = document.getElementById(decodeURIComponent(window.location.hash.substr(1)));
+            if(el) markElement(el);
+        }
+    }
+
+    var registerXrefLink = function(link){
+        var el = document.getElementById(decodeURIComponent(link.getAttribute("href").substr(1)));
+        if(el){
+            link.addEventListener("click", function(){
+                markElement(el);
+            });
+        }
+    }
+
+    var registerXrefLinks = function(root){
+        root = root || document;
+        [].forEach.call(root.querySelectorAll("a.xref"), registerXrefLink);
+    }
+
+    markFragmented();
+    registerXrefLinks();
+}); </script> </body> </html> 
