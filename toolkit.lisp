@@ -10,7 +10,7 @@
          (error "No file manager present on NX."))
   #-(or windows darwin nx) "xdg-open")
 (defvar *default-url-handler*
-  #+windows "explorer.exe"
+  #+windows "explorer"
   #+darwin "open"
   #+nx (lambda (url &key &allow-other-keys)
          (cffi:foreign-funcall "nxgl_open_url" :string url :bool))
